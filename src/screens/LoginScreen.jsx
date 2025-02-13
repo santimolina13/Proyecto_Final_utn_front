@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import useForm from '../hooks/userForm'
 import ENVIROMENT from '../utils/config/enviroment'
 import { Link,  useNavigate } from 'react-router-dom'
 import {  errors } from '../componentes/errorInput'
 import '../styles/loginScreen.styles.css'
+import { AuthContext } from '../context/AuthContext'
 
 const LoginScreen = () => {
 
 
 const {form_state,handleChangeInput}=useForm({email:"",password:""})
-
+const { setIsAuthenticatedState } = useContext(AuthContext)
 //aca capturo el query string del correo verificado (verify=true) deberia estar en un componente aparte que se despliega dada una condicion
 const url=new URLSearchParams(window.location.search)
 
@@ -34,8 +35,7 @@ const handleSubmitForm=async(event)=>{
         if (data.data && data.data.acces_token) { // Verifica que data contiene el token
             sessionStorage.setItem("acces_token", data.data.acces_token);
             sessionStorage.setItem("name", data.data.user_info.name);
-            console.log("Redirigiendo a home");
-            console.log("Token guardado:", sessionStorage.getItem("acces_token"));
+            setIsAuthenticatedState(true);
             navigate("/home");
         } else {
             console.error("Error en la autenticación:", data);
