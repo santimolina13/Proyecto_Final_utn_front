@@ -35,6 +35,7 @@ const handleSubmitForm=async(event)=>{
             sessionStorage.setItem("acces_token", data.data.acces_token);
             sessionStorage.setItem("name", data.data.user_info.name);
             console.log("Redirigiendo a home");
+            console.log("Token guardado:", sessionStorage.getItem("acces_token"));
             navigate("/home");
         } else {
             console.error("Error en la autenticación:", data);
