@@ -1,0 +1,197 @@
+
+
+ .aside-container_contactsScreen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.aside-container_contactsScreen h2 {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    margin: 20px;
+}
+
+
+.div-search {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.div-search div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #7c5978;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.div-search div span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+.div-search div input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding: 5px;
+    outline: none;
+}
+
+.div-search div input:focus {
+    background-color: transparent;
+}
+
+
+.ul-contactos {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-color: #888 transparent; 
+    scrollbar-width: thin;
+}
+
+.li-contactos {
+    width: 100%;
+    height: 70px;
+}
+
+.li-contactos button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: background-color 0.3s ease;
+}
+
+.li-btn-span-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #262524;
+    margin-right: 15px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+.li-btn-span-username {
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(233, 169, 211, 0.1);
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
+
+.li-contactos button:hover {
+    background-color: #7c5978;
+}
+
+
+.div-add-contact {
+    box-shadow: 0px -1px 0px 0px rgba(233, 169, 211, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 68px;
+}   
+
+.div-add-contact button {
+    border: none;
+    background-color: #7c5978;
+    cursor: pointer;
+    width: 70%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.div-add-contact button:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 340px) {
+    .aside-container_contactsScreen h2 {
+        font-size: 1.6rem;
+        margin-left: 10px;
+    }
+
+    .div-search {
+        padding: 0 10px;
+    }
+
+    .div-search div {
+        padding: 4px;
+    }
+
+    .div-search div span {
+        width: 35px;
+        font-size: 1rem;
+    }
+
+    .div-search div input {
+        font-size: 0.9rem;
+    }
+
+    .li-contactos {
+        height: 60px;
+    }
+
+    .li-btn-span-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .li-btn-span-username {
+        font-size: 0.9rem;
+    }
+
+    .div-add-contact {
+        height: 70px;
+    }
+
+    .div-add-contact button {
+        width: 80%;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+}

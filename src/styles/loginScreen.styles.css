@@ -1,0 +1,112 @@
+
+
+.FormPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #262524;
+}
+
+.conteinerForm {
+  background: rgba(112, 37, 96, 0.288);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 10px #fff;
+  text-align: center;
+  width: 320px;
+}
+
+.conteinerForm h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.conteinerForm div {
+  margin-bottom: 15px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.lconteinerForm label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+.conteinerForm input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  border-bottom: 2px solid #666;
+}
+.conteinerForm  input:focus {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #666;
+ 
+}
+.conteinerForm input::placeholder {
+  color: #666;
+}
+
+.conteinerForm button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.conteinerForm button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.conteinerForm button:hover {
+  background-color: #262524;
+}
+
+.spanForm {
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+}
+
+.spanForm a {
+  color: #dd6be7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.spanForm a:hover {
+  text-decoration: underline;
+}
+.error_input {
+  color: red;
+}
+
+@media (max-width: 340px) {
+  .FormPage {
+      width: 100%;
+      height: 100vh;
+      border-radius: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
