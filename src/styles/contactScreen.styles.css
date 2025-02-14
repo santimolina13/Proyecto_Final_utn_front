@@ -201,5 +201,9 @@
         background-color: #262524;
         border: 1px solid #7c5978;
         height: auto;
+
+    }
+    .li-btn-span-avatar{
+        background-color: #7c5978;
     }
 }
