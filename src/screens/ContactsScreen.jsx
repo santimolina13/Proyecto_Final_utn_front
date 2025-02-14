@@ -47,7 +47,7 @@ const ContactsScreen = ({ onSelectContact }) => {
     <h2 className='h2-tus-contactos'>Contactos</h2>
         <div className='div-search'>
             <div>
-                    <span className='span-search'><BiSearchAlt  style={{color:"black"}}/></span>
+                    <span className='span-search'><BiSearchAlt  style={{color:"black"}} title="Buscar"/></span>
                     <input type="search" name="search" id="search" className='input-search' />
                 </div>
             </div>
