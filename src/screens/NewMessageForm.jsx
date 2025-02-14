@@ -4,6 +4,8 @@ import { getAuthenticatedHeaders } from '../fetching/customHeaders'
 import ENVIROMENT from '../utils/config/enviroment'
 import useForm from '../hooks/userForm'
 import '../styles/newMessageForm.style.css'
+import { IoMdMicrophone } from "react-icons/io";
+import { GiPaperClip } from "react-icons/gi";
 
 const NewMessageForm = ({chatId}) => {
     
@@ -32,12 +34,12 @@ const NewMessageForm = ({chatId}) => {
         
   return (
     <div className='new-message-form-container'>
-        <span className='clip'>+</span>
+        <span className='clip'><GiPaperClip  className='icon' style={{color:"black"}}/></span>
         <form onSubmit={handleSubmitForm} className='new-message-form'>
             <input type="text" name='content' id='content' onChange={handleChangeInput} value={form_state.content} className='new-message-input' />
             <button type='submit' className='new-message-button'>{'>'}</button>
         </form>
-        <span  className='microfono'>M</span>
+        <span  className='microfono'><IoMdMicrophone /></span>
     </div>
   )
 }
