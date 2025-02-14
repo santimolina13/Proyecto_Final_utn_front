@@ -1,9 +1,8 @@
- import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ContactsScreen from './ContactsScreen'
-import { CiLogout } from "react-icons/ci";
-
 import { ChatScreen } from './ChatScreen'
 import '../styles/homeScreen.styles.css'
+import { IoMdSettings } from "react-icons/io";
 
 const HomeScreen = () => {
   
@@ -19,7 +18,9 @@ const HomeScreen = () => {
     <div className='home-container'>
 
       <section className='section-container'>
-        <nav className='nav-container'> <CiLogout/></nav>
+        <nav className='nav-container'>
+          <IoMdSettings  className='nav-icon' />
+        </nav>
         <aside className='aside-container_contacts'>
           <ContactsScreen onSelectContact={setContactSelect} className='contactos'/>
         </aside>
