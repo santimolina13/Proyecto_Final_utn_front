@@ -1,20 +1,22 @@
 
+ 
  .new-message-form-container {
     display: flex;
     align-items: center;
+    justify-content: center; 
     padding: 10px;
     background-color: #7c5978;
     border-top: 1px solid rgba(233, 169, 211, 0.2);
-    flex-wrap: wrap; 
+    width: 100%;
 }
 
 .new-message-form {
-    flex-grow: 1;
     display: flex;
     align-items: center;
     background-color: #1e1c1c;
     border-radius: 25px;
     padding: 5px 10px;
+    width: 80%; 
     max-width: 100%;
 }
 
@@ -26,8 +28,10 @@
     font-size: 1rem;
     padding: 5px;
     outline: none;
-    min-width: 50px; 
-    max-width: 100%; 
+    min-width: 50px;
+    max-width: 100%;
+    height: 30px; 
+    line-height: 1.5; 
 }
 
 .new-message-button {
@@ -39,10 +43,13 @@
     font-size: 1.2rem;
     cursor: pointer;
     transition: background 0.3s ease;
+    display: flex;  
+    align-items: center;  
+    justify-content: center; 
 }
 
 .new-message-button:hover {
-    background-color: #262524;
+    background-color: #444;
 }
 
 .clip, .microfono {
@@ -50,25 +57,32 @@
     font-size: 1.5rem;
     margin: 0 10px;
     cursor: pointer;
+    margin: 20px;
+
 }
 
 
-@media (max-width: 523px) {
+@media (max-width: 525px) {
     .new-message-form-container {
-        justify-content: center; 
+        justify-content: center;
+        height: auto;
         padding: 5px;
     }
 
     .new-message-form {
-        width: 100%;
+        width: 90%; 
         max-width: 100%;
-        flex-wrap: wrap;
         padding: 5px;
+        height: auto;
+        flex-wrap: nowrap; 
     }
 
     .new-message-input {
         font-size: 0.9rem;
         padding: 5px;
+        width: 100%; 
+        height: 30px;
+        line-height: 1.5; 
     }
 
     .new-message-button {
@@ -79,6 +93,10 @@
     .clip, .microfono {
         font-size: 1.2rem;
         margin: 5px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
-
