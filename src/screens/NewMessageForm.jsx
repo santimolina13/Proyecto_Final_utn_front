@@ -34,7 +34,7 @@ const NewMessageForm = ({chatId}) => {
         
   return (
     <div className='new-message-form-container'>
-        <span className='clip'><GiPaperClip  className='icon' style={{color:"black"}}/></span>
+        <span className='clip'><GiPaperClip  className='icon' style={{color:"black"}} title="Adjuntar archivo"/></span>
         <form onSubmit={handleSubmitForm} className='new-message-form'>
             <input type="text" name='content' id='content' onChange={handleChangeInput} value={form_state.content} className='new-message-input' />
             <button type='submit' className='new-message-button'>{'>'}</button>

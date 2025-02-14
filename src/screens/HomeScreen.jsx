@@ -19,7 +19,7 @@ const HomeScreen = () => {
 
       <section className='section-container'>
         <nav className='nav-container'>
-          <IoMdSettings  className='nav-icon' />
+          <IoMdSettings  className='nav-icon' title="Buscar" />
         </nav>
         <aside className='aside-container_contacts'>
           <ContactsScreen onSelectContact={setContactSelect} className='contactos'/>
