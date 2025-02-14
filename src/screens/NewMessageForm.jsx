@@ -39,7 +39,7 @@ const NewMessageForm = ({chatId}) => {
             <input type="text" name='content' id='content' onChange={handleChangeInput} value={form_state.content} className='new-message-input' />
             <button type='submit' className='new-message-button'>{'>'}</button>
         </form>
-        <span  className='microfono'><IoMdMicrophone /></span>
+        <span  className='microfono'><IoMdMicrophone  title="Mandar mensaje de audio"/></span>
     </div>
   )
 }
